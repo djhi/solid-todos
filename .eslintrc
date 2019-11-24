@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "extends": [
+        "react-app",
+        "plugin:jsx-a11y/recommended",
+        "plugin:prettier/recommended",
+        "prettier/@typescript-eslint",
+        "prettier/react"
+    ],
+    "plugins": ["@typescript-eslint", "react", "jsx-a11y", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+    }
+}
