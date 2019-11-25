@@ -3,8 +3,8 @@ import { createDocument, fetchDocument, TripleDocument, TripleSubject, Reference
 import { rdf, solid, schema, space } from 'rdf-namespaces';
 import newUuid from 'uuid/v4';
 
-import usePublicTypeIndex from './usePublicTypeIndex';
-import useProfile from './useProfile';
+import usePublicTypeIndex from './sdk/usePublicTypeIndex';
+import useProfile from './sdk/useProfile';
 import { Todo, AddTodo, RemoveTodo } from './types';
 
 type TodosActions = {
