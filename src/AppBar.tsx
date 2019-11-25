@@ -20,9 +20,9 @@ const AppBar = () => {
 	const isLoggedIn = useLoggedIn();
 
 	return (
-		<Flex bg="teal.600" color="teal.50" direction="column">
+		<Flex bg="teal.600" direction="column">
 			<MaxWidthContainer as="header" flex={1} alignItems="center" p={4}>
-				<Heading as="h1" fontSize="md">
+				<Heading color="teal.50" as="h1" fontSize="md">
 					Solid Todos
 				</Heading>
 				{isLoggedIn ? <UserMenu /> : <LogInButton />}
@@ -39,7 +39,7 @@ const UserMenu = (props: BoxProps) => {
 
 	return (
 		<Flex ml="auto" alignItems="center">
-			{isLoading ? null : <Text mr={1}>{`${name}`}</Text>}
+			{isLoading ? null : <Text color="teal.50" mr={1}>{`${name}`}</Text>}
 			<Menu>
 				{/*
                 // @ts-ignore */}
@@ -48,7 +48,8 @@ const UserMenu = (props: BoxProps) => {
 					// @ts-ignore
 					variant="link"
 					// @ts-ignore
-					variantColor="white"
+					variantColor="teal"
+					color="teal.50"
 					icon="chevron-down"
 					aria-label="Open menu"
 				></MenuButton>
@@ -64,7 +65,7 @@ const LogInButton = (props: Omit<ButtonProps, 'children'>) => {
 	const handleLogIn = () => auth.popupLogin({ popupUri: '/login-popup.html' });
 
 	return (
-		<Button onClick={handleLogIn} ml="auto">
+		<Button onClick={handleLogIn} ml="auto" variantColor="teal">
 			Login
 		</Button>
 	);
